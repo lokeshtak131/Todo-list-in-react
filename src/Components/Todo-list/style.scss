@@ -1,0 +1,73 @@
+.mainTodo-area{
+    background-color:#333;
+    display:flex;
+    justify-content:center;
+    height:100vh;
+    align-items:center;
+    h1{
+        font-size:32px;
+        line-height:38px;
+        font-weight:500;
+        color:#fff;
+        margin-bottom:20px;
+    }
+    .todoBox-area{
+        border:1px solid cyan;
+        background-color:#000;
+        box-shadow:0 16px 32px rgb(255, 255 , 255, 0.2);
+        .card-body{
+            .inputData-sec{
+                display:flex;
+                position: relative;
+                margin-bottom:20px;
+                input{
+                    padding:6px 90px 6px 12px;
+                }
+                .btn-success{
+                    position:absolute;
+                    right:0;
+                    top:0;
+                    border-radius:0 5px 5px 0;
+                    background-color:cyan;
+                    border-color:cyan;
+                    color:#000;
+                    &:hover{
+                        background-color:darken($color:cyan, $amount: 5%);
+                    }
+                }
+            }
+            .outputData-list{
+                padding:0;
+                li{
+                    text-align:left;
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-between;
+                    width:100%;
+                    margin-bottom:15px;
+                    border:1px solid cyan;
+                    border-radius:6px;
+                    padding:5px 10px;
+                    &::marker{
+                        color:#fff;
+                    }
+                    span{
+                        color:#fff;
+                        &.isActive{
+                            text-decoration:line-through;
+                            color:rgb(21, 219, 54);
+                        }
+                        &.unActive{
+                            color:#fff;
+                            text-decoration:initial;
+                        }
+                    }
+                    .deleteicon{
+                        color:rgb(250, 31, 31);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

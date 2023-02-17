@@ -1,0 +1,65 @@
+.TodoList-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  .todoCard {
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #0a0909;
+    border: 2px solid #0af1da;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #0af1da;
+    margin-bottom: 30px;
+  }
+  .InputBox {
+    .input-group {
+      .btn-outline-primary {
+        color: #0af1da;
+        border-color: #0af1da;
+        border-left: none;
+        &:hover,
+        &:focus-visible {
+          background-color: #0af1da;
+          color: #fff;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .todoItem-list {
+    li {
+      text-align: left;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #000;
+      border: 1px solid #0af1da;
+      margin-bottom: 10px;
+      color: #fff;
+      &::marker {
+        color: #0af1da;
+      }
+      .listInner-data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .leftIcons {
+          .iconCss {
+            color: green;
+            cursor:pointer;
+            &:first-child {
+              margin-right: 8px;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
